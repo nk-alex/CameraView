@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Maui;
+using SampleCameraView.ViewModels;
+using SampleCameraView.Views;
 
 namespace SampleCameraView;
 
@@ -8,7 +10,19 @@ public static class MauiProgram
     {
         var builder = MauiApp.CreateBuilder();
         builder
-            .UsePrismApp<App>(PrismStartup.Configure)
+            .UseMauiApp<App>()
+            .UsePrism(
+                prism => prism.RegisterTypes(
+                    containerRegistry =>
+                    {
+                        containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+                        containerRegistry.RegisterInstance(SemanticScreenReader.Default);
+                    })
+                .CreateWindow(async navigationService =>
+                {
+                    await navigationService.NavigateAsync("/MainPage");
+                })
+            )
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

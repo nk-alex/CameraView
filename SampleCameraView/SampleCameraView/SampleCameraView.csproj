@@ -48,11 +48,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Maui" Version="8.1.191-beta" />
-    <PackageReference Include="CommunityToolkit.Maui" Version="9.0.2" />
-    <PackageReference Include="CommunityToolkit.Maui.Camera" Version="1.0.3" />
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.71" />
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.71" />
+    <PackageReference Include="Prism.DryIoc.Maui" Version="9.0.537" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="9.0.3" />
+    <PackageReference Include="CommunityToolkit.Maui.Camera" Version="1.0.4" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.82" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.82" />
   </ItemGroup>
 
 </Project>
